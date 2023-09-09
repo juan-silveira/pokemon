@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Jogo, Pokemon, Projeto, Desenvolvimento Web, Coderhouse">
+    <meta name="description"
+        content="Você era um dos que esperava os intervalos dos episódios de Pokémon para acertar qual era o Pokémon? Venha jogar o nosso Quiz.">
+    <link rel="stylesheet" href="../styles/style.css">
+
+    <link rel="stylesheet" href="../styles/menu.css">
+    <link rel="stylesheet" href="../styles/who.css">
+
+    <link rel="icon" type="image/x-icon" href="../images/pokeball.jpg">
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Pokédex - Quem é esse Pokémon?</title>
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <header class="header">
+        <div class="header__wrapper">
+            <!-- Logo -->
+            <a href="#" class="header__logo"><img class="header__logoImage" src="../images/logo.svg" alt="logo"></a>
+            <!-- Hamburger icon -->
+            <input class="header__sideMenu" type="checkbox" id="side-menu" />
+            <label class="header__hamburguer" for="side-menu"><span class="header__hamburguerLine"></span></label>
+            <!-- Menu -->
+            <nav class="header__nav">
+                <ul class="header__navMenu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./about.html">Sobre</a></li>
+                    <li><a href="./pokedex.html">Pokédex</a></li>
+                    <li><a href="./memory-login.html">Jogo da Memória</a></li>
+                    <li class="active"><a href="./who.html">Quem é esse Pokémon?</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="content">
+            <span class="content__title"><strong>Quem é esse Pokémon?</strong></span>
+            <div class="whoPkm">
+                    <div class="whoPkm__images">
+                        <img draggable="false" class="whoPkm__images__whobg" src="../images/whobg.png" alt="who-bg">
+                        <img draggable="false" class="whoPkm__images__who" id="pkmImage" src="../images/who.png"
+                            alt="who-image">
+                    </div>
+                    <div class="whoPkm__info hide">
+                        <span id="pkmName"></span>
+                        <span id="pkmNumber"></span>
+                    </div>
+                <form class="whoPkm__try" action="">
+                    <input class="input" id="pkmTry" type="text" placeholder="Digite o nome do Pokémon">
+                </form>
+                <div class="whoPkm__dontKnowPkm">
+                    <button class="button" id="who-is">Não sei qual é o pokemon!</button>
+                    <button class="button" id="try-again">Tentar novamente</button>
+                </div>
+                <div class="whoPkm__buttons">
+                    <button class="button" id="tip1">Dica 1</button>
+                    <button class="button" id="tip2">Dica 2</button>
+                    <button class="button" id="tip3">Dica 3</button>
+                </div>
+                <div class="whoPkm__tips">
+                    <p class="whoPkm__tips--p1 hide"></p>
+                    <p class="whoPkm__tips--p2 hide"></p>
+                    <p class="whoPkm__tips--p3 hide"></p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">Desenvolvido pelo <a
+                href="https://github.com/juan-silveira/projeto-coderhouse-turma-45415" target="_blank">Grupo 1</a> da
+            turma 45415 do curso de Desenvolvimento Web da
+            <strong>CoderHouse</strong> Brasil
+        </p>
+    </footer>
+
+    <script src="../scripts/who.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Pokedex, Pokemon, Projeto, Desenvolvimento Web, Coderhouse">
+    <meta name="description" content="Procure seu pokemon favorito, e veja os status dele em nossa pokedex.">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/menu.css">
+    <link rel="stylesheet" href="../styles/snackbar.css">
+    <link rel="stylesheet" href="../styles/pokedex.css">
+    <link rel="icon" type="image/x-icon" href="../images/pokeball.jpg">
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Pokédex - Pokédex</title>
+</head>
+
+<body>
+
+    <!-- Navigation bar -->
+    <header class="header">
+        <div class="header__wrapper">
+            <!-- Logo -->
+        <a href="#" class="header__logo"><img class="header__logoImage" src="../images/logo.svg" alt="logo"></a>
+        <!-- Hamburger icon -->
+        <input class="header__sideMenu" type="checkbox" id="side-menu"/>
+        <label class="header__hamburguer" for="side-menu"><span class="header__hamburguerLine"></span></label>
+        <!-- Menu -->
+        <nav class="header__nav">
+            <ul class="header__navMenu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./about.html">Sobre</a></li>
+                <li class="active"><a href="./pokedex.html">Pokédex</a></li>
+                <li><a href="./memory-login.html">Jogo da Memória</a></li>
+                <li><a href="./who.html">Quem é esse Pokémon?</a></li>
+            </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="pokedex">
+            <div class="pokedex__header" id="pokedexHeader">
+                <button class="button button__prev"><i class="fa fa-arrow-left"></i></button>
+                <form autocomplete="off" class="form" id="form">
+                    <div class="form__autocomplete">
+                        <input class="form__search" type="search" id="search" placeholder="Digite o nome ou id"
+                            required />
+                    </div>
+                    <button class="button__submit" type="submit"><i class='fa fa-search'></i></button>
+                </form>
+                <button class="button button__next"><i class="fa fa-arrow-right"></i></button>
+            </div>
+            <div class="pokedex__body" id="pokedexBody">
+                <div class="pokedex__body__top">
+                    <div class="pokedex__body__top__info">
+                        <span class="pokedex__body__top__info__pokemonName" id="pokemonName">Pokeball</span>
+                        <span class="pokedex__body__top__info__pokemonNumber" id="pokemonNumber">#???</span>
+                    </div>
+                    <div class="pokedex__image">
+                        <img src="../images/pokeball.jpg" class="pokedex__image__pokemonImage" id="pokemonImage"
+                            alt="pokemon-image" />
+                    </div>
+                </div>
+
+                <div class="pokedex__body__stats">
+                    <div class="d-flex">
+                        <div class="stats__top">
+                            <div class="stats__top__weight">
+                                <span id="weight">?.?</span>
+                                <span>kg</span>
+                                <div class="icon">
+                                    <i class="fa fa-weight-hanging"></i>
+                                    <smaller>Peso</smaller>
+                                </div>
+                            </div>
+
+                            <div class="stats__top__height">
+                                <span id="height">?.?</span>
+                                <span>m</span>
+                                <div class="icon">
+                                    <smaller>Altura</smaller>
+                                    <i class="fa fa-ruler-vertical icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pokemon__types" id="pokemonTypes">
+                        <span class="pokemon__types__type">
+                            ???
+                        </span>
+                        <span class="pokemon__types__type">
+                            ???
+                        </span>
+                    </div>
+
+                    <div class="stats__body">
+                        <h4 class="stats__body__title" id="base-stats">Base Stats</h4>
+                        <div class="stats__body__allStats">
+                            <div class="d-flex">
+                                <div class="stat__description">HP</div>
+                                <div class="stat__number">000</div>
+                                <div class="stat__bar">
+                                    <div class="stat__bar__outer">
+                                        <div class="stat__bar__inner"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="stat__description">ATK</div>
+                                <div class="stat__number">000</div>
+                                <div class="stat__bar">
+                                    <div class="stat__bar__outer">
+                                        <div class="stat__bar__inner"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="stat__description">DEF</div>
+                                <div class="stat__number">000</div>
+                                <div class="stat__bar">
+                                    <div class="stat__bar__outer">
+                                        <div class="stat__bar__inner"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="stat__description">SATK</div>
+                                <div class="stat__number">000</div>
+                                <div class="stat__bar">
+                                    <div class="stat__bar__outer">
+                                        <div class="stat__bar__inner"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="stat__description">SDEF</div>
+                                <div class="stat__number">000</div>
+                                <div class="stat__bar">
+                                    <div class="stat__bar__outer">
+                                        <div class="stat__bar__inner"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="stat__description">SPD</div>
+                                <div class="stat__number">000</div>
+                                <div class="stat__bar">
+                                    <div class="stat__bar__outer">
+                                        <div class="stat__bar__inner"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="stat__total">TOTAL</div>
+                                <div class="stat__number stat__tnumber">000</div>
+                                <div class="stat__bar">
+                                    <div class="stat__bar__outer" id="bar-touter">
+                                        <div class="stat__bar__inner" id="bar-tinner"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">Desenvolvido pelo <a href="https://github.com/juan-silveira/projeto-coderhouse-turma-45415"
+                target="_blank">Grupo 1</a> da turma 45415 do curso de Desenvolvimento Web da
+            <strong>CoderHouse</strong> Brasil
+        </p>
+    </footer>
+    <div id="snackbar">Pokémon não encontrado!</div>
+    <script src="../scripts/pokedex.js"></script>
+</body>
+
+</html>

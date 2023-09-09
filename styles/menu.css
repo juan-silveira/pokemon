@@ -1,0 +1,148 @@
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+    margin-right: 15px;
+}
+
+/* Header */
+.header{
+    background-color: var(--darkGray);
+    box-shadow: 1px 1px 5px 0px var(--gray);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.header__wrapper {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+/* Logo */
+.header-logo{
+    display: inline-block;
+}
+
+.header__logoImage {
+    width: 5rem;
+    margin: 10px 10px 0px 10px;
+}
+
+/* Nav menu */
+.header__nav{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: var(--darkGray);
+    overflow: hidden;
+    transition: max-height .5s ease-out;
+    max-height: 0;
+}
+
+.header__navMenu a{
+    display: block;
+    color: var(--white);
+}
+.header__navMenu li{
+    display: block;
+    padding: 10px 15px;
+}
+.header__navMenu li:hover{
+    background-color: var(--white);
+}
+
+.header__navMenu li:hover a{
+    color: var(--darkGray);
+}
+.header__navMenu li.active{
+    background-color: var(--yellow);
+}
+.header__navMenu li.active a{
+    color: var(--blue);
+}
+
+/* Menu Icon */
+.header__hamburguer{
+    cursor: pointer;
+    float: right;
+    transform: translate(-20px, 20px);
+    /* position: absolute; */
+}/* Style label tag */
+
+.header__hamburguerLine {
+    background: var(--white);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+
+} /* Style span tag */
+
+.header__hamburguerLine::before,
+.header__hamburguerLine::after{
+    background: var(--white);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.header__hamburguerLine::before{
+    top: 5px;
+}
+.header__hamburguerLine::after{
+    top: -5px;
+}
+
+.header__sideMenu {
+    display: none;
+} /* Hide checkbox */
+
+/* Toggle menu icon */
+.header__sideMenu:checked ~ nav{
+    max-height: 100%;
+}
+.header__sideMenu:checked ~ .header__hamburguer .header__hamburguerLine {
+    background: transparent;
+}
+.header__sideMenu:checked ~ .header__hamburguer .header__hamburguerLine::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.header__sideMenu:checked ~ .header__hamburguer .header__hamburguerLine::after {
+    transform: rotate(45deg);
+    top:0;
+}
+
+/* Responsiveness */
+@media (min-width: 815px) {
+    .header__nav{
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+    }
+    .header__navMenu li{
+        float: left;
+    }
+    .header__navMenu a:hover{
+        background-color: transparent;
+        color: var(--gray);
+    }
+    .header__hamburguer{
+        display: none;
+    }
+}
+
+@media (max-width: 799px) {
+    .header__navMenu li{
+        margin: 0px;
+    }
+}
