@@ -38,7 +38,7 @@ const type = {
 // Função assíncrona para retornar os dados de um arquivo json
 const fetchJson = async () => {
     // Váriável aguarda a resposta da chamada ao arquivo json
-    const response = await fetch("../files/pokedex.json");
+    const response = await fetch("files/pokedex.json");
 
     // Se o status da resposta for SUCESSO, então...
     if (response.status === 200) {
