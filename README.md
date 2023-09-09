@@ -1,7 +1,7 @@
 # projeto-coderhouse-turma-45415
 Projeto do curso de Desenvolvimento Web da Coderhouse Brasil
 
-Atualmente com conteúdo da aula 10 do dia 18/07/2023.
+Versão final publicada dia 09/09/2023
 
 Demo em: 
 
